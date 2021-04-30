@@ -1,0 +1,31 @@
+{% extends "index.html" %}
+
+{% block header %}
+{% endblock header %}
+{% block body %}
+<div class="container contenidos">
+    <div class="row">
+    <div class="col-md-auto col-l-auto">
+        <h1 style="color: black;">{{ object.title }}</h1>
+        <hr>
+        <img src="{{ object.thumbnail.url }}" style="width:60%; height: 50%; margin-bottom:2%; margin-left: 20%;"
+            class="card-img-top" alt="...">
+        <p style="text-align: justify;">{{ object.content }}</p>
+        <hr>
+    </div>
+</div>
+{% if request.user.is_authenticated %}
+<form class="mrgtp">
+    <button type="button" class="btn btn-secondary move"><a class=""
+            href="{% url 'updatecar' pk=object.id %}"><i class="far fa-edit" style="color: white;">Editar
+                Post</i></button>
+    <button type="button" class="btn btn-danger move"><a class=""
+            href="{% url 'deletecar' pk=object.id %}"><i class="far fa-edit" style="color: white;">Borrar
+                Post</i></button>
+
+</form>
+{% else %}
+{% endif %}
+</div>
+
+{% endblock %}

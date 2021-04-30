@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+
+{% block body %}
+<div class="container contenidos">
+    <h1 style="color: black;">¿Desea borrar este post? <i class="fas fa-exclamation-triangle"></i>
+        <h1>
+            <h3 style="color: black;">{{ object.title }}</h3>
+            <hr>
+            <div class="row">
+                <div class="col-4">
+                    <form method="POST" style="margin-right: 2%;">
+                        {% csrf_token %}
+                        <button class='btn btn-danger' type='submit'>Si</button>
+                    </form>
+                </div>
+            </div>
+</div>
+{% endblock body %}

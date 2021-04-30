@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+{%load static%}
+{% load crispy_forms_tags %}
+
+{% block header %}
+{% endblock %}
+
+{% block body %}
+<div class="container contenidos">
+    <div class="row">
+        <div class="col-md-8 col-l-auto justify-content-center">
+            <h2>Agenda tu cita o envía tus consultas <i class="far fa-id-card"></i></h2>
+            <form method="POST" enctype='multipart/form-data'>
+                {% csrf_token %}
+                {{form|crispy}}
+
+                <button class='btn btn-primary' type='submit'>Enviar datos</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

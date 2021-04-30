@@ -1,0 +1,36 @@
+.slide{
+    width: 75%;
+margin-left: 13%;}
+
+    .slide img{
+        height:300px;
+        border-color: #3da0ae;
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 5px;
+        margin-top: 65px;
+        box-shadow: 5px 8px 8px #888888;
+    }
+
+.mapa{
+    border-color: #3da0ae;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    box-shadow: 5px 8px 8px #888888;
+
+}
+
+.cardBajo{
+    height: 60px;
+
+ }
+
+ .contenidos{
+     margin-top: 100px;
+ }
+
+.mrgtp{
+    padding-top: 7%
+}
+

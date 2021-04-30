@@ -1,0 +1,91 @@
+{% extends "index.html" %}
+{%load static%}
+{% block body %}
+<div class="container">
+  <div class='row'>
+    {% for posts in post %}
+    <div class="mrgtp col-md-auto col-l-auto d-flex justify-content-center">
+
+      <div class="card" style="width: 17rem;">
+        <img src="{{ posts.thumbnail.url }}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">
+            <a href="{{ posts.get_absolute_url }}">{{ posts.title }}
+            </a>
+          </h5>
+          <p class="card-text">{{ posts.content|truncatechars:40 }}</p>
+          <hr />
+          <p class="card-text">
+            Publicado hace {{ posts.publish_date|timesince }}
+          </p>
+        </div>
+      </div>
+
+    </div>
+    {% endfor %}
+  </div>
+  <div class="row mrgtp">
+    <h2>Mi ubicación: <i class="fas fa-map-signs"></i></h2>
+    <div class="mrgtp col-md-auto col-l-auto d-flex justify-content-center">
+
+      <div class="mapa">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3869.7627817446933!2d-87.1981038851657!3d14.091175990128564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDA1JzI4LjIiTiA4N8KwMTEnNDUuMyJX!5e0!3m2!1ses!2shn!4v1619496601559!5m2!1ses!2shn"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+    <div class="mrgtp col-md-auto col-l-auto d-flex justify-content-center">
+      <p>Colonia Alameda, Edificio Paviole, 2ndo nivel. Tegucigalpa, Honduras</p>
+    </div>
+  </div>
+</div>
+
+{% endblock body %}
+{% block header %}
+
+<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static '/images/princ.jpg'%}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h4><strong> Soy la doctora Devra Zuniga</strong></h4>
+        <p>Bienvenidos a este nuevo espacio! Nuestro objetivo es lograr la mejor sonrisa de nuestros pacientes.</p>
+      </div>
+    </div>
+    {% for sliders in slider %}
+    <div class="carousel-item">
+      <a href="{{ sliders.get_absolute_url }}"><img src="{{ sliders.thumbnail.url }}" class="d-block w-100"
+          alt="..."></a>
+      <div class="carousel-caption d-none d-md-block">
+        <p>{{ sliders.content }}</p>
+      </div>
+    </div>
+    {% endfor %}
+
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+  </a>
+</div>
+
+<!-- Call to Action Well -->
+<div class="card cardBajo text-white my-2 py-0 text-center" style="background-color:#3da0ae">
+  <div class="card-body">
+    <p><strong>Conoce mas sobre temas interesantes para tu salud dental</strong></p>
+  </div>
+</div>
+<hr />
+
+
+
+{% endblock %}
