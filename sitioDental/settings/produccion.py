@@ -17,3 +17,4 @@ DATABASES = {
     }
 }
 
+STATICFILES_DIRS=(BASE_DIR,'/blog_dz/static')
