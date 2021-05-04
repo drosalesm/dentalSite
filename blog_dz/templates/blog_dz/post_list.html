@@ -53,8 +53,7 @@
     <div class="carousel-item active">
       <img src="{% static '/images/princ.jpg'%}" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h4><strong> Soy la doctora Devra Zuniga</strong></h4>
-        <p>Bienvenidos a este nuevo espacio! Nuestro objetivo es lograr la mejor sonrisa de nuestros pacientes.</p>
+        <h1 class="coloresCarr"><strong> Soy la doctora Devra Zuniga</strong></h1>
       </div>
     </div>
     {% for sliders in slider %}
@@ -62,7 +61,7 @@
       <a href="{{ sliders.get_absolute_url }}"><img src="{{ sliders.thumbnail.url }}" class="d-block w-100"
           alt="..."></a>
       <div class="carousel-caption d-none d-md-block">
-        <p>{{ sliders.content }}</p>
+        <h2 class="coloresCarr">{{ sliders.title }}</h2>
       </div>
     </div>
     {% endfor %}
@@ -81,7 +80,7 @@
 <!-- Call to Action Well -->
 <div class="card cardBajo text-white my-2 py-0 text-center" style="background-color:#3da0ae">
   <div class="card-body">
-    <p><strong>Conoce mas sobre temas interesantes para tu salud dental</strong></p>
+    <h3>Bienvenidos a este nuevo espacio! Mi objetivo es lograr la mejor sonrisa para ti</h3>
   </div>
 </div>
 <hr />

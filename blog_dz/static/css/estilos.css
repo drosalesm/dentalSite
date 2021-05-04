@@ -1,9 +1,13 @@
 .slide{
     width: 75%;
-margin-left: 13%;}
+margin-left: 13%;
+font-family: 'Itim', cursive;
+font-size: 25px;
+
+}
 
     .slide img{
-        height:300px;
+        height:350px;
         border-color: #3da0ae;
         border-width: 1px;
         border-style: solid;
@@ -23,14 +27,21 @@ margin-left: 13%;}
 
 .cardBajo{
     height: 60px;
-
+    font-family: 'Itim', cursive;
+    font-size: 25px; 
  }
 
  .contenidos{
      margin-top: 100px;
- }
+     font-family: 'Itim', cursive;
+     font-size: 25px;
+
+    }
 
 .mrgtp{
     padding-top: 7%
 }
 
+.coloresCarr{
+    color:#3da0ae;
+}
