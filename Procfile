@@ -1,1 +1,2 @@
-web: gunicorn sitioDental.wsgf
+web: gunicorn sitioDental.wsgi
+
