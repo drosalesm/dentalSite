@@ -35,11 +35,12 @@ font-size: 25px;
      margin-top: 100px;
      font-family: 'Itim', cursive;
      font-size: 25px;
-
     }
 
 .mrgtp{
     padding-top: 7%
+    word-break: break-all; 
+    word-wrap: break-word;
 }
 
 .coloresCarr{
